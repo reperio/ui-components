@@ -1,0 +1,768 @@
+@import 'variables';
+@import '~react-select/dist/react-select.css';
+@import '~react-datepicker/dist/react-datepicker.css';
+@import '~https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-size: 14px;
+}
+
+.label {
+    line-height: 30px;
+}
+
+.#{$namespace}-form-control {
+    background-color: white;
+    padding: 6px 16px;
+    border-radius: 4px;
+    border-width: 0.5 0.5 5 0.5 !important;
+    border-style: solid;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+    min-height: $min-input-height;
+    transition: 0.25s;
+    font: 16px/1.5em 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+}
+
+.#{$namespace}-neutral {
+    color: $reperio-blue !important;
+    border-color: $reperio-blue !important;
+    &:hover {
+        color: white !important;
+        background-color: $reperio-blue !important;
+        border-color: $reperio-blue !important;
+    }
+    &:focus {
+        outline: transparent;
+        background-color: $reperio-blue !important;
+        border-color: $reperio-blue !important;
+        color: white !important;
+    }
+    &:active {
+        color: white !important;
+        background-color: $reperio-dark-blue !important;
+        border-color: $reperio-dark-blue !important;
+    }
+    &:disabled {
+        outline: transparent;
+        background-color: $reperio-disabled-blue !important;
+        border-color: $reperio-disabled-blue !important;
+        color: white !important;
+    }
+}
+
+.#{$namespace}-danger {
+    color: $reperio-red !important;
+    border-color: $reperio-red !important;
+    &:hover {
+        color: white !important;
+        background-color: $reperio-red !important;
+        border-color: $reperio-red !important;
+    }
+    &:focus {
+        outline: transparent;
+        background-color: $reperio-red !important;
+        border-color: $reperio-red !important;
+        color: white !important;
+    }
+    &:active {
+        color: white !important;
+        background-color: $reperio-dark-red !important;
+        border-color: $reperio-dark-red !important;
+    }
+    &:disabled {
+        outline: transparent;
+        background-color: $reperio-disabled-red !important;
+        border-color: $reperio-disabled-red !important;
+        color: white !important;
+    }
+}
+
+.#{$namespace}-success {
+    color: $reperio-teal !important;
+    border-color: $reperio-teal !important;
+    &:hover {
+        color: white !important;
+        background-color: $reperio-teal !important;
+        border-color: $reperio-teal !important;
+    }
+    &:focus {
+        outline: transparent;
+        background-color: $reperio-teal !important;
+        border-color: $reperio-teal !important;
+        color: white !important;
+    }
+    &:active {
+        color: white !important;
+        background-color: $reperio-dark-teal !important;
+        border-color: $reperio-dark-teal !important;
+    }
+    &:disabled {
+        outline: transparent;
+        background-color: $reperio-disabled-teal !important;
+        border-color: $reperio-disabled-teal !important;
+        color: white !important;
+    }
+}
+
+.#{$namespace}-cancel {
+    color: $reperio-charcoal !important;
+    border-color: $reperio-charcoal !important;
+    &:hover {
+        color: white !important;
+        background-color: $reperio-charcoal !important;
+        border-color: $reperio-charcoal !important;
+    }
+    &:focus {
+        outline: transparent;
+        background-color: $reperio-charcoal !important;
+        border-color: $reperio-charcoal !important;
+        color: white !important;
+    }
+    &:active {
+        color: white !important;
+        background-color: $reperio-dark-charcoal !important;
+        border-color: $reperio-dark-charcoal !important;
+    }
+    &:disabled {
+        outline: transparent;
+        background-color: $reperio-disabled-charcoal !important;
+        border-color: $reperio-disabled-charcoal !important;
+        color: white !important;
+    }
+}
+
+.#{$namespace}-text-input {
+    width: 100%;
+    border-color: $reperio-input-border;
+    border-bottom-width: 0.5px !important;
+    padding-bottom: 4.5px;
+    font: 16px/1.5em 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    &:focus-within {
+        color: $reperio-blue;
+        padding-bottom: 0;
+        border-bottom-width: 5px !important;
+        border-color: $reperio-blue;
+        outline: transparent !important;
+    }
+    &:disabled {
+        color: $reperio-disabled-placeholder;
+        background-color: $reperio-navbar-background;
+        outline: transparent !important;
+        border-color: $reperio-disabled-charcoal !important;
+        &::placeholder {
+            color: $reperio-disabled-placeholder !important;
+        }
+    }
+}
+
+.#{$namespace}-dropdown {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    font: 16px/1.5em 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    background-color: #fff;
+    border-color: $reperio-input-border;
+    border-bottom-width: 0.5px !important;
+    padding-bottom: 4.5px;
+    &:focus-within {
+        color: $reperio-blue;
+        padding-bottom: 0;
+        border-bottom-width: 5px !important;
+        border-color: $reperio-blue;
+        outline: transparent !important;
+    }
+    >option {
+        color: black !important;
+    }
+    &:disabled{
+        color: $reperio-charcoal;
+        box-shadow: 0px 0px 5px 0px rgba($reperio-charcoal, 0.4);
+        background-color: $reperio-navbar-background;
+        outline: transparent !important;
+        border: solid rgba(0, 0, 0, 0.2) 1px !important;
+        padding: 0px 16px;
+    }
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        /*safari and chrome*/
+        & {
+            height: $min-input-height;
+            line-height: 1em;
+        }
+    }
+    @media screen\0 {
+        /* IE Hacks: targets IE 8, 9 and 10 */
+        select {
+            height: $min-input-height;
+            line-height: 1em;
+        }
+    }
+    &::-moz-focus-inner {
+        /*Remove button padding in FF*/
+        border: 0;
+        padding: 0;
+    }
+}
+
+@-moz-document url-prefix() {
+    /* targets Firefox only */
+    .#{$namespace}-dropdown {
+        padding: 15px 0 !important;
+    }
+}
+
+.#{$namespace}-anchor {
+    color: rgba(66, 133, 195, 1);
+    text-decoration: none;
+    &:hover {
+        color: rgba(45, 88, 128, 1);
+        text-decoration: none;
+    }
+}
+
+.#{$namespace}-checkbox-container {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: normal;
+
+    /* Hide the browser's default checkbox */
+    & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    &:focus-within {
+        outline: auto 5px -webkit-focus-ring-color;
+    }
+}
+
+/* Create a custom checkbox */
+.#{$namespace}-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 21px;
+    border-width: 3 !important;
+    border-color: $reperio-blue !important;
+    background-color: transparent !important;
+    border-style: solid;
+    border-radius: 4px;
+    /* Create the checkmark/indicator (hidden when not checked) */
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}
+
+/* custom radio button checkmark */
+.#{$namespace}-radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid $reperio-blue;
+    /* when radio button is checked, add the blue circle */
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}
+
+
+/* Show the checkmark when checked */
+.#{$namespace}-checkbox-container {
+    & input:checked~.#{$namespace}-checkbox:after {
+        display: block;
+    }
+
+    & input:disabled+.#{$namespace}-checkbox {
+        border-width: 3 !important;
+        border-color: $reperio-disabled-checkbox-blue !important;
+        background-color: transparent !important;
+        border-style: solid;
+        border-radius: 4px;
+    }
+    
+    /* Style the checkmark/indicator */
+    & .#{$namespace}-checkbox:after {
+        left: 5px;
+        width: 6px;
+        height: 13px;
+        border: solid $reperio-blue;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    & input:disabled+.#{$namespace}-checkbox:after {
+        border: solid $reperio-disabled-checkbox-blue;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    & input:checked ~ .#{$namespace}-radio-checkmark:after {
+        display: block;
+    }
+
+    & input:disabled+.#{$namespace}-radio-checkmark {
+        border-width: 3 !important;
+        border-color: $reperio-disabled-checkbox-blue !important;
+        background-color: transparent !important;
+        border-style: solid;
+        border-radius: 50%;
+    }
+
+    & .#{$namespace}-radio-checkmark:after {
+        top:4px;
+        left:4px;
+        width:11px;
+        height:11px;
+        border-radius: 50%;
+        background: $reperio-blue;
+    }
+
+    & input:disabled+.#{$namespace}-radio-checkmark:after {
+        top: 4px;
+        left: 4px;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: $reperio-disabled-checkbox-blue;
+    }
+}
+
+/* reset and override some of the React-Select styles to behave like reper.io components */
+.Select-control {
+    border: none;
+    box-shadow: none;
+}
+
+.Select-control {
+    background-color: white;
+    border-radius: 4px;
+    border-width: 0.5 0.5 5 0.5;
+    border-style: solid;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+    border-color: $reperio-input-border;
+    min-height: $min-input-height;
+    transition: 0.25s;
+    font: 16px/1.5em 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+}
+
+.Select-multi-value-wrapper {
+    border-color: $reperio-input-border;
+    border-bottom-width: 0.5px !important;
+    font: 16px/1.5em 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    &:focus-within {
+        color: $reperio-blue;
+        padding-bottom: 0;
+        border-bottom-width: 5px !important;
+        border-color: $reperio-blue;
+        outline: transparent !important;
+    }
+    &:disabled {
+        color: $reperio-disabled-placeholder;
+        background-color: $reperio-navbar-background;
+        outline: transparent !important;
+        border-color: $reperio-disabled-charcoal !important;
+        &::placeholder {
+            color: $reperio-disabled-placeholder !important;
+        }
+    }
+}
+
+.Select.is-clearable.is-searchable.Select--single,
+.Select.has-value.is-clearable.is-searchable.Select--single {
+
+    &>.Select-control {
+        border-color: $reperio-input-border;
+        border-bottom-width: 0.5px;
+        outline: transparent !important;
+        padding: 0px 16px;
+    }
+
+    .Select-value-label {
+        color: $reperio-blue;
+    }
+
+    .Select-multi-value-wrapper>.Select-value {
+        padding: 3.5px 16px;
+    }
+
+    .Select-placeholder {
+        padding: 3.5px 16px;
+    }
+    
+    .Select-input {
+        padding: 0;
+        padding-top: 3.5px;
+    }
+}
+
+.Select.is-clearable.is-searchable.Select--multi,
+.Select.has-value.is-clearable.is-searchable.Select--multi {
+    &>.Select-control {
+        border-color: $reperio-input-border;
+        border-bottom-width: 0.5px;
+        outline: transparent !important;
+        padding: 0px 16px;
+    }
+
+    .Select-value-label {
+        color: $reperio-blue;
+    }
+
+    .Select-placeholder {
+        padding: 3.5px 16px;
+    }
+
+    .Select-input {
+        padding: 0;
+        padding-top: 3.5px;
+    }
+}
+
+.Select.is-clearable.is-searchable.Select--multi,
+.Select.has-value.is-clearable.is-searchable.Select--multi {
+    .Select-multi-value-wrapper>.Select-value {
+        padding: 0;
+    }
+}
+
+.Select.is-clearable.is-searchable.Select--single,
+.Select.has-value.is-clearable.is-searchable.Select--single,
+.Select.is-clearable.is-searchable.Select--multi,
+.Select.has-value.is-clearable.is-searchable.Select--multi {
+    .Select-value-label {
+        color: $reperio-charcoal;
+    }
+}
+
+.Select.is-clearable.is-searchable.is-disabled.Select--single,
+.Select.has-value.is-clearable.is-searchable.is-disabled.Select--single,
+.Select.is-clearable.is-searchable.is-disabled.Select--multi,
+.Select.has-value.is-clearable.is-searchable.is-disabled.Select--multi {
+    &>.Select-control {
+        color: $reperio-disabled-placeholder;
+        background-color: $reperio-navbar-background;
+        outline: transparent !important;
+    }
+}
+
+.Select.is-clearable.is-searchable.is-open.Select--single,
+.Select.has-value.is-clearable.is-searchable.is-open.Select--single,
+.Select.is-clearable.is-focused.is-searchable.Select--single,
+.Select.has-value.is-clearable.is-focused.is-searchable.Select--single,
+.Select.is-clearable.is-focused.is-pseudo-focused.is-searchable.Select--single,
+.Select.has-value.is-clearable.is-focused.is-pseudo-focused.is-searchable.Select--single {
+    &>.Select-control {
+        border-color: $reperio-blue;
+        border-bottom-width: 5px;
+        outline: transparent !important;
+        padding: 0px 16px;
+    }
+
+    .Select-value-label {
+        color: $reperio-blue;
+    }
+
+    .Select-placeholder {
+        padding: 3.5px 16px;
+    }
+
+    .Select-multi-value-wrapper > .Select-value {
+        padding: 3.5px 16px;
+    }
+
+    .Select-input {
+        padding: 0;
+        padding-top: 3.5px;
+    }
+}
+
+.Select.is-clearable.is-searchable.is-open.Select--multi,
+.Select.has-value.is-clearable.is-searchable.is-open.Select--multi,
+.Select.is-clearable.is-focused.is-searchable.Select--multi,
+.Select.has-value.is-clearable.is-focused.is-searchable.Select--multi,
+.Select.is-clearable.is-focused.is-pseudo-focused.is-searchable.Select--multi,
+.Select.has-value.is-clearable.is-focused.is-pseudo-focused.is-searchable.Select--multi {
+    &>.Select-control {
+        border-color: $reperio-blue;
+        border-bottom-width: 5px;
+        outline: transparent !important;
+        padding: 0px 16px;
+    }
+
+    .Select-value-label {
+        color: $reperio-blue;
+    }
+
+    .Select-placeholder {
+        padding: 3.5px 16px;
+    }
+
+    .Select-input {
+        padding: 0;
+        padding-top: 3.5px;
+    }
+
+    &>.Select-control.Select-multi-value-wrapper {
+        padding: 0;
+    }
+
+    .Select-input {
+        margin-left: 0;
+    }
+
+    &>.Select-control {
+        outline: transparent !important;
+    }
+
+    outline: transparent !important;
+}
+
+.Select.is-focused:not(.is-open)>.Select-control {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+}
+
+.Select-placeholder {
+    color: $reperio-placeholder-gray;
+    font-style: italic;
+    opacity: 1;
+}
+
+.Select.is-clearable.is-disabled.is-searchable.Select--single,
+.Select.has-value.is-clearable.is-disabled.is-searchable.Select--single {
+    &>.Select-control {
+        color: $reperio-disabled-placeholder;
+        background-color: $reperio-navbar-background;
+        outline: transparent !important;
+    }
+}
+
+.Select--multi.is-disabled .Select-value {
+    background-color: #d8d6d6;
+    border: 1px solid #e3e3e3;
+    color: $reperio-disabled-placeholder;
+}
+
+.Select-arrow-zone, .Select-clear-zone {
+    vertical-align: text-bottom;
+}
+
+.Select-control:hover {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16) !important;
+}
+
+.Select.is-clearable.is-searchable.Select--single .Select-value-label,
+.Select.has-value.is-clearable.is-searchable.Select--single .Select-value-label,
+.Select.is-clearable.is-searchable.Select--multi .Select-value-label,
+.Select.has-value.is-clearable.is-searchable.Select--multi .Select-value-label {
+    color: $reperio-disabled-placeholder;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $reperio-placeholder-gray;
+    font-style: italic;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $reperio-placeholder-gray;
+    font-style: italic;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $reperio-placeholder-gray;
+    font-style: italic;
+}
+
+.react-datepicker {
+    font-size: 1em;
+}
+
+.react-datepicker__header {
+    padding-top: 0.8em;
+}
+
+.react-datepicker__month {
+    margin: 0.4em 1em;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+    width: 1.9em;
+    line-height: 1.9em;
+    margin: 0.166em;
+}
+
+.react-datepicker__current-month {
+    font-size: 1em;
+}
+
+.react-datepicker__navigation {
+    top: 1em;
+    line-height: 1.7em;
+    border: 0.45em solid transparent;
+}
+
+.react-datepicker__navigation--previous {
+    border-right-color: #ccc;
+    left: 1em;
+}
+
+.react-datepicker__navigation--next {
+    border-left-color: #ccc;
+    right: 1em;
+}
+
+.#{$namespace}-applications {
+    cursor: pointer;
+}
+
+.#{$namespace}-applications-container {
+    &.btn-default {
+        background: none;
+        border:none;
+    }
+}
+
+.#{$namespace}-applications-container-content > div:hover { 
+    background-color: $reperio-placeholder-gray;
+}
+
+.#{$namespace}-applications-squares {
+    display:flex;
+    flex-wrap: wrap;
+    width: 36px;
+}
+
+.#{$namespace}-applications-square {
+    width: 12px;
+    height: 12px;
+    background-color: $reperio-blue;
+    border-color: $reperio-blue;
+    border-style: solid;
+    border-width: 1px;
+    margin: 3px;
+    transition: background 0.25s ease-in;
+}
+
+.#{$namespace}-applications-top-left-square {
+    background-color: transparent;
+}
+
+.#{$namespace}-applications-container-content {
+    display:flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    width: 450px;
+    transition: visibility 0.5s;
+    padding: 0;
+}
+
+div &.open &.#{$namespace}-applications-container > .#{$namespace}-applications > .#{$namespace}-applications-squares > .#{$namespace}-applications-square {
+    background: transparent;
+    transition: background 0.25s ease-out;
+}
+
+.#{$namespace}-applications-container-content > div {
+    width:150px;
+    flex-grow: 1;
+    text-align: center;
+    display: inline-block;
+    background-color: #e3e3e3;
+}
+
+.nav {
+    display: flex;
+}
+
+.#{$namespace}-menu-left-container {
+    width: 50%;
+    display: flex !important;
+}
+
+.#{$namespace}-menu-right-container {
+    width: 50%;
+    display: flex !important;
+}
+
+.#{$namespace}-menu-left-container-nav-items {
+    list-style: none;
+
+    & > li {
+        display: inline-block;
+        padding:10px;
+    }
+}
+
+.#{$namespace}-profile {
+    cursor: pointer;
+}
+
+.#{$namespace}-profile-container {
+    &.btn-default {
+        background: none;
+        border:none;
+    }
+}
+
+#profileInfo {
+    text-align: right;
+}
+
+.btn-group.open .dropdown-toggle {
+    box-shadow: none !important;
+}
+
+.#{$namespace}-profile-menu {
+    position: relative;
+}
+
+.#{$namespace}-profile-content {
+    text-align: right;
+}
+
+.#{$namespace}-profile-initials {
+    border-radius: 50%;
+    height: 36px;
+    max-height: 36px;
+    width: 36px;
+    max-width: 36px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 36px;
+    background-color: #3A73A8;
+    color: white;
+    font: bold;
+    font-family: 'Nunito Sans';
+    font-size: 1.15em;
+}

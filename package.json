@@ -1,0 +1,57 @@
+{
+  "name": "ui-components",
+  "version": "0.1.0",
+  "description": "Reperio UI Component Library",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reperio/ui-components.git"
+  },
+  "author": "Brian Adams",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/reperio/ui-components/issues"
+  },
+  "homepage": "https://github.com/reperio/ui-components#readme",
+  "dependencies": {
+    "moment": "^2.22.2",
+    "react": "^16.4.2",
+    "react-datepicker": "^1.5.0",
+    "react-dom": "^16.2.0",
+    "react-select": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/moment": "^2.13.0",
+    "@types/react": "^16.4.7",
+    "@types/react-datepicker": "^1.1.6",
+    "@types/react-dom": "^16.0.4",
+    "@types/react-select": "^1.2.7",
+    "autoprefixer": "^9.1.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.9.2",
+    "postcss-loader": "^2.1.6",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "ts-loader": "^4.1.0",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.7.2",
+    "typescript-eslint-parser": "^11.0.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
