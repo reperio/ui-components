@@ -1,5 +1,5 @@
 {
-  "name": "ui-components",
+  "name": "@reperio/ui-components",
   "version": "0.1.0",
   "description": "Reperio UI Component Library",
   "main": "./dist/index.js",
