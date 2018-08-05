@@ -1,8 +1,9 @@
 {
   "name": "@reperio/ui-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reperio UI Component Library",
-  "main": "dist/index.js",
+  "main": "dist/index",
+  "typings": "dist/index",
   "scripts": {
     "build": "./node_modules/.bin/webpack --mode=production"
   },
