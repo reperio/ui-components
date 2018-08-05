@@ -2,7 +2,7 @@
   "name": "@reperio/ui-components",
   "version": "0.1.0",
   "description": "Reperio UI Component Library",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --mode=production"
   },
