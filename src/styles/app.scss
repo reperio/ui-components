@@ -766,3 +766,90 @@ div &.open &.#{$namespace}-applications-container > .#{$namespace}-applications 
     font-family: 'Nunito Sans';
     font-size: 1.15em;
 }
+
+.#{$namespace}-grid {
+    border:none !important;
+    color: $reperio-charcoal;
+    font: 16px/1.5em 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    & > .pagination-bottom > .-pagination {
+        height: 40px;
+    }
+    & > .rt-table {
+        & .rt-tbody > .rt-tr-group {
+            & > .rt-tr > .rt-td {
+                padding-left:25px;
+                padding-right: 25px;
+            }
+            & .-odd {
+                height: 45px;
+                position: relative;
+                line-height: 30px;
+                cursor: pointer;
+            }
+            & .-even {
+                height: 45px;
+                position: relative;
+                line-height: 30px;
+                cursor: pointer;
+            }
+            & .-padRow {
+                cursor: default;
+            }
+        }
+        & > .-filters > .rt-tr {
+            & > .rt-th {
+                border-right: 1px solid rgba(0, 0, 0, 0.05);
+                padding:5px 20px 5px 20px;
+                & > input[type='text'] {
+                    color: $reperio-blue;
+                    border-radius: 5px;
+                    font: 16px/1.5em 'Nunito Sans', sans-serif;
+                    font-weight: 100;
+                    &:focus-within {
+                        border: 1px $reperio-blue solid;
+                    }
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+        & > .rt-thead {
+            box-shadow: none !important;
+            & > .rt-tr {
+                & .-sort-asc {
+                    box-shadow: none;
+                    & > .rt-resizable-header-content {
+                        color: $reperio-blue;
+                        &:after {
+                            content: '';
+                            border-color: #4285c3 transparent transparent;
+                            border-style: solid;
+                            border-width: 5px 5px 1.5px;
+                            position: absolute;
+                            bottom: 35%;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                & .-sort-desc {
+                    box-shadow: none;
+                    & > .rt-resizable-header-content {
+                        color: $reperio-blue;
+                        &:after {
+                            content: '';
+                            transform: rotate(180deg);
+                            border-color: #4285c3 transparent transparent;
+                            border-style: solid;
+                            border-width: 5px 5px 1.5px;
+                            position: absolute;
+                            top: 43%;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

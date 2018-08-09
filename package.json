@@ -1,6 +1,6 @@
 {
   "name": "@reperio/ui-components",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Reperio UI Component Library",
   "main": "dist/index",
   "typings": "dist/index",
@@ -22,7 +22,8 @@
     "react": "^16.4.2",
     "react-datepicker": "^1.5.0",
     "react-dom": "^16.2.0",
-    "react-select": "^1.2.1"
+    "react-select": "^1.2.1",
+    "react-table": "^6.8.6"
   },
   "devDependencies": {
     "@types/moment": "^2.13.0",
@@ -30,6 +31,7 @@
     "@types/react-datepicker": "^1.1.6",
     "@types/react-dom": "^16.0.4",
     "@types/react-select": "^1.2.7",
+    "@types/react-table": "^6.7.12",
     "autoprefixer": "^9.1.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^6.4.1",
