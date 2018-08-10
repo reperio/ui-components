@@ -5092,9 +5092,9 @@ react-select@^1.2.1:
     prop-types "^15.5.8"
     react-input-autosize "^2.1.2"
 
-react-table@^6.8.6:
-  version "6.8.6"
-  resolved "https://registry.yarnpkg.com/react-table/-/react-table-6.8.6.tgz#a0ad8b4839319052d5befc012603fb161e52ede3"
+"react-table@https://github.com/reperio/react-table.git":
+  version "6.8.7"
+  resolved "https://github.com/reperio/react-table.git#b60c02faecb362cfd444533758d8ebb817769a87"
   dependencies:
     classnames "^2.2.5"
 
