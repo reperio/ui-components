@@ -13,8 +13,7 @@ const Textbox:React.SFC<TextboxProps> = props => {
 }
 
 Textbox.defaultProps = {
-    disabled: false,
-    type: "text"
+    disabled: false
 }
 
 export default Textbox;
