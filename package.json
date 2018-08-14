@@ -1,9 +1,9 @@
 {
   "name": "@reperio/ui-components",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Reperio UI Component Library",
-  "main": "dist/index",
-  "typings": "dist/index",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
   "scripts": {
     "build": "./node_modules/.bin/webpack --mode=production"
   },
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/reperio/ui-components.git"
   },
   "author": "Brian Adams",
-  "license": "Apache 2.0",
+  "license": "AFL-2.0",
   "bugs": {
     "url": "https://github.com/reperio/ui-components/issues"
   },

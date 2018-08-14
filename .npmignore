@@ -59,8 +59,7 @@ typings/
 
 # next.js build output
 .next
-dist
-lib
+
 
 # vim swap files
 *.swp
