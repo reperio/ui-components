@@ -21,4 +21,9 @@ Checkbox.defaultProps = {
     disabled: false
 }
 
-export default Checkbox;
+const CheckboxElement = (props:any) => {
+    const {input, meta, ...rest} = props;
+        return (<Checkbox {...input} {...rest} />
+)};
+
+export { Checkbox, CheckboxElement };

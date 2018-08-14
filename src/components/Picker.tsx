@@ -25,4 +25,9 @@ Picker.defaultProps = {
     multi: false
 }
 
-export default Picker;
+const PickerElement = (props:any) => {
+    const {input, meta, ...rest} = props;
+        return (<Picker {...input} {...rest} />
+)};
+
+export { Picker, PickerElement };

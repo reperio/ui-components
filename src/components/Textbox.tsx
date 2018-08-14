@@ -17,4 +17,9 @@ Textbox.defaultProps = {
     type: "text"
 }
 
-export default Textbox;
+const TextboxElement = (props:any) => {
+    const {input, meta, ...rest} = props;
+        return (<Textbox {...input} {...rest} />
+)};
+
+export { Textbox, TextboxElement };

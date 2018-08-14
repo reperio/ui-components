@@ -9,4 +9,9 @@ const Anchor:React.SFC<AnchorProps> = props => {
     return <a href={props.href} className="r-anchor">{props.text}</a>;
 }
 
-export default Anchor;
+const AnchorElement = (props:any) => {
+    const {input, meta, ...rest} = props;
+        return (<Anchor {...input} {...rest} />
+)};
+
+export { Anchor, AnchorElement };
