@@ -22,4 +22,9 @@ RadioButton.defaultProps = {
     disabled: false
 }
 
-export default RadioButton;
+const RadioButtonElement = (props:any) => {
+    const {input, meta, ...rest} = props;
+        return (<RadioButton {...input} {...rest} />
+)};
+
+export { RadioButton, RadioButtonElement };

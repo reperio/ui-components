@@ -22,4 +22,9 @@ Datepicker.defaultProps = {
     disabled: false
 }
 
-export default Datepicker;
+const DatepickerElement = (props:any) => {
+    const {input, meta, ...rest} = props;
+        return (<Datepicker {...input} {...rest} />
+)};
+
+export { Datepicker, DatepickerElement };

@@ -17,4 +17,9 @@ Button.defaultProps = {
     disabled: false
 }
 
-export default Button;
+const ButtonElement = (props:any) => {
+    const {input, meta, ...rest} = props;
+        return (<Button {...input} {...rest} />
+)};
+
+export { Button, ButtonElement };
