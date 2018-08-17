@@ -5,16 +5,18 @@ interface ButtonProps {
     color?: string,
     onClick?(event: any): void,
     text: string,
-    disabled?: boolean
+    disabled?: boolean,
+    type?: string
 }
 
 const Button:React.SFC<ButtonProps> = props => {
-    return <button name={props.name} className={`r-form-control r-btn r-${props.color}`} onClick={props.onClick} disabled={props.disabled}>{props.text}</button>;
+    return <button type={props.type} name={props.name} className={`r-form-control r-btn r-${props.color}`} onClick={props.onClick} disabled={props.disabled}>{props.text}</button>;
 }
 
 Button.defaultProps = {
     color: 'neutral',
-    disabled: false
+    disabled: false,
+    type: "button"
 }
 
 const ButtonElement = (props:any) => {
