@@ -9,6 +9,7 @@ interface GridProps {
     filterable?: boolean
     manual?: boolean
     pages?: any,
+    rowClick?: any
 }
 
 const Grid:React.SFC<GridProps> = props => {
@@ -20,6 +21,7 @@ const Grid:React.SFC<GridProps> = props => {
         defaultSorted={props.defaultSorted}
         filterable={props.filterable}
         manual={props.manual}
+        getTrProps={props.rowClick}
         pages={props.pages}/>
 }
 
