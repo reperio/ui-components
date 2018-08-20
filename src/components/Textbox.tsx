@@ -5,7 +5,7 @@ interface TextboxProps {
     placeholder?: string,
     onChange?(event: any): void,
     disabled?: boolean,
-    type: string
+    type?: string
 }
 
 const Textbox:React.SFC<TextboxProps> = props => {
