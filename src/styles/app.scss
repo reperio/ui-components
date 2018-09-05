@@ -26,11 +26,10 @@ body {
 
 .#{$namespace}-form-control {
     background-color: white;
-    padding: 6px 16px;
+    padding: 6px 16px 3px 16px;
     border-radius: 4px;
     border-width: 0.5 0.5 5 0.5 !important;
     border-style: solid;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
     min-height: $min-input-height;
     transition: 0.25s;
     font: 16px/1.5em 'Nunito Sans', sans-serif;
@@ -193,7 +192,6 @@ body {
     }
     &:disabled{
         color: $reperio-charcoal;
-        box-shadow: 0px 0px 5px 0px rgba($reperio-charcoal, 0.4);
         background-color: $reperio-navbar-background;
         outline: transparent !important;
         border: solid rgba(0, 0, 0, 0.2) 1px !important;
@@ -251,6 +249,7 @@ body {
         position: absolute;
         opacity: 0;
         cursor: pointer;
+        visibility: hidden;
     }
 
     &:focus-within {
@@ -373,7 +372,6 @@ body {
     border-radius: 4px;
     border-width: 0.5 0.5 5 0.5;
     border-style: solid;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
     border-color: $reperio-input-border;
     min-height: $min-input-height;
     transition: 0.25s;
@@ -467,7 +465,7 @@ body {
 .Select.is-clearable.is-searchable.Select--multi,
 .Select.has-value.is-clearable.is-searchable.Select--multi {
     .Select-value-label {
-        color: $reperio-charcoal;
+        color: #333;
     }
 }
 
@@ -554,10 +552,6 @@ body {
     outline: transparent !important;
 }
 
-.Select.is-focused:not(.is-open)>.Select-control {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-}
-
 .Select-placeholder {
     color: $reperio-placeholder-gray;
     font-style: italic;
@@ -583,15 +577,15 @@ body {
     vertical-align: text-bottom;
 }
 
-.Select-control:hover {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16) !important;
+.Select.is-clearable.is-disabled.is-searchable.Select--single .Select-value-label,
+.Select.has-value.is-clearable.is-disabled.is-searchable.Select--single .Select-value-label,
+.Select.is-clearable.is-disabled.is-searchable.Select--multi .Select-value-label,
+.Select.has-value.is-clearable.is-disabled.is-searchable.Select--multi .Select-value-label {
+    color: $reperio-disabled-placeholder;
 }
 
-.Select.is-clearable.is-searchable.Select--single .Select-value-label,
-.Select.has-value.is-clearable.is-searchable.Select--single .Select-value-label,
-.Select.is-clearable.is-searchable.Select--multi .Select-value-label,
-.Select.has-value.is-clearable.is-searchable.Select--multi .Select-value-label {
-    color: $reperio-disabled-placeholder;
+.Select--multi .Select-value {
+    margin-top: 6px;
 }
 
 ::-webkit-input-placeholder {
