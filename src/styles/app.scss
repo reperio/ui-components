@@ -861,3 +861,116 @@ div &.open &.#{$namespace}-applications-container > .#{$namespace}-applications 
         }
     }
 }
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 1.5em;
+}
+
+.table-row-container {
+    background-color: white;
+    border-bottom: solid;
+    border-color: #f3f3f3;
+    border-width: 1px;
+    padding: 7px;
+}
+
+.table-row-bottom-container {
+    background-color: white;
+    padding: 7px;
+}
+
+.table-row-property {
+    color: gray;
+}
+
+.nested-table-container {
+    padding: "10px";
+    min-width: "620px";
+}
+
+.danger>a {
+    color: red !important;
+}
+
+.dropdown-menu {
+    background-color: $reperio-navbar-background;
+    height: auto;
+    margin: 0px;
+    padding: 10px;
+    box-shadow: none;
+    border-radius: 0;
+    border: 5px solid transparent;
+    border-image: url("../assets/rio-slider-colorband1.png") 5 stretch;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.dropdown-menu {
+    .divider {
+        margin: 5px 0px 5px 0px;
+        background-color: $reperio-placeholder-gray;
+    }
+}
+
+.#{$namespace}-applications {
+    cursor: pointer;
+}
+
+.#{$namespace}-applications-container {
+    &.btn-default {
+        background: none;
+        border: none;
+    }
+}
+
+.#{$namespace}-applications-container-content>div:hover {
+    background-color: $reperio-placeholder-gray;
+    cursor: pointer;
+}
+
+.#{$namespace}-applications-squares {
+    display: flex;
+    flex-wrap: wrap;
+    width: 36px;
+}
+
+.#{$namespace}-applications-square {
+    width: 12px;
+    height: 12px;
+    background-color: $reperio-blue;
+    border-color: $reperio-blue;
+    border-style: solid;
+    border-width: 1px;
+    margin: 3px;
+    transition: background 0.25s ease-in;
+}
+
+.#{$namespace}-applications-top-left-square {
+    background-color: transparent;
+}
+
+.#{$namespace}-applications-container-content {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    width: 450px;
+    transition: visibility 0.5s;
+    padding: 0;
+}
+
+div &.open &.#{$namespace}-applications-container>.#{$namespace}-applications>.#{$namespace}-applications-squares>.#{$namespace}-applications-square {
+    background: transparent;
+    transition: background 0.25s ease-out;
+}
+
+.#{$namespace}-applications-container-content>div {
+    width: 150px;
+    flex-grow: 0;
+    text-align: center;
+    display: inline-block;
+    background-color: #e3e3e3;
+    padding: 10px;
+}
