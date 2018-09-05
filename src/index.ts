@@ -6,7 +6,8 @@ import { Datepicker, DatepickerElement } from './components/Datepicker';
 import { Picker, PickerElement } from './components/Picker';
 import { RadioButton, RadioButtonElement} from './components/RadioButton';
 import { Textbox, TextboxElement} from './components/Textbox';
-import { Grid, GridElement } from './components/Grid';
-import { Wrapper, WrapperElement } from './components/Wrapper';
+import { Grid } from './components/Grid';
+import { Wrapper } from './components/Wrapper';
+import { ProfileInfoMenu } from './components/ProfileInfoMenu'
 
-export {Anchor, AnchorElement, Button, ButtonElement, Checkbox, CheckboxElement, Datepicker, DatepickerElement, Picker, PickerElement, RadioButton, RadioButtonElement, Textbox, TextboxElement, Grid, GridElement, Wrapper, WrapperElement};
+export {Anchor, AnchorElement, Button, ButtonElement, Checkbox, CheckboxElement, Datepicker, DatepickerElement, Picker, PickerElement, RadioButton, RadioButtonElement, Textbox, TextboxElement, Grid, Wrapper, ProfileInfoMenu};

@@ -12,9 +12,4 @@ Wrapper.defaultProps = {
 
 }
 
-const WrapperElement = (props:any) => {
-    const {input, meta, ...rest} = props;
-        return (<Wrapper {...rest} />);
-}
-
-export { Wrapper, WrapperElement };
+export { Wrapper };

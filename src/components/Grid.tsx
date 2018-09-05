@@ -31,9 +31,4 @@ Grid.defaultProps = {
     manual: false
 }
 
-const GridElement = (props:any) => {
-    const {input, meta, ...rest} = props;
-        return (<Grid {...input} {...rest} />
-)};
-
-export { Grid, GridElement };
+export { Grid };
