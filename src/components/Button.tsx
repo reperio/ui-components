@@ -6,11 +6,12 @@ interface ButtonProps {
     onClick?(event: any): void,
     text: string,
     disabled?: boolean,
-    type?: string
+    type?: string,
+    wide?: boolean
 }
 
 const Button:React.SFC<ButtonProps> = props => {
-    return <button type={props.type} name={props.name} className={`r-form-control r-btn r-${props.color}`} onClick={props.onClick} disabled={props.disabled}>{props.text}</button>;
+    return <button type={props.type} name={props.name} className={`r-form-control r-btn r-${props.color} ${props.wide ? 'r-wide-btn' : ''}`} onClick={props.onClick} disabled={props.disabled}>{props.text}</button>;
 }
 
 Button.defaultProps = {

@@ -169,6 +169,10 @@ body {
     }
 }
 
+.#{$namespace}-wide-btn {
+    width: 100%;
+}
+
 .#{$namespace}-dropdown {
     -webkit-appearance: none;
     -moz-appearance: none;
