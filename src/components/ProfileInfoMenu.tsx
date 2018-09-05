@@ -30,4 +30,4 @@ const ProfileInfoMenu: React.SFC<ProfileInfoMenuProps> = props => {
     </DropdownButton>
 }
 
-export { ProfileInfoMenu }; 
+export { ProfileInfoMenu, ProfileInfoMenuProps }; 
