@@ -26,8 +26,7 @@ const Navbar: React.SFC<NavbarProps> = props => {
                 <Nav style={{display: "inline-block"}}>
                     {props.linkContainers}
                 </Nav>
-            </BsNavbar.Collapse>
-            {props.authenticated ? 
+                {props.authenticated ? 
                 <Nav pullRight>
                     <ApplicationsMenu>
                         {props.applicationMenuItems}
@@ -35,6 +34,7 @@ const Navbar: React.SFC<NavbarProps> = props => {
                 <ProfileInfoMenu initials={props.profile.initials} name={props.profile.name} accountName={props.profile.accountName} phone={props.profile.phone} email={props.profile.email} />
                 </Nav>
             : null}
+            </BsNavbar.Collapse>
         </BsNavbar>
         <ReperioBar/>
     </div >
