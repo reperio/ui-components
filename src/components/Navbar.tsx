@@ -9,7 +9,8 @@ const reperio = require('../assets/reperio-rAsset-31.png');
 interface NavbarProps {
     linkContainers: any[],
     applicationMenuItems: any[],
-    profile: ProfileInfoMenuProps
+    profile: ProfileInfoMenuProps,
+    authenticated: boolean
 }
 
 const Navbar: React.SFC<NavbarProps> = props => {
@@ -23,12 +24,14 @@ const Navbar: React.SFC<NavbarProps> = props => {
             <Nav>
                 {props.linkContainers}
             </Nav>
-            <Nav pullRight>
-                <ApplicationsMenu>
-                    {props.applicationMenuItems}
-                </ApplicationsMenu>
+            {props.authenticated ? 
+                <Nav pullRight>
+                    <ApplicationsMenu>
+                        {props.applicationMenuItems}
+                    </ApplicationsMenu>
                 <ProfileInfoMenu initials={props.profile.initials} name={props.profile.name} accountName={props.profile.accountName} phone={props.profile.phone} email={props.profile.email} />
-            </Nav>
+                </Nav> 
+            : null}
         </BsNavbar>
         <ReperioBar/>
     </div >
