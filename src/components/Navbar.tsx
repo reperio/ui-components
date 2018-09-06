@@ -20,17 +20,20 @@ const Navbar: React.SFC<NavbarProps> = props => {
                 <BsNavbar.Brand>
                     <img className="r-menu-header-icon" src={reperio} />
                 </BsNavbar.Brand>
+                <BsNavbar.Toggle/>
             </BsNavbar.Header>
-            <Nav>
-                {props.linkContainers}
-            </Nav>
+            <BsNavbar.Collapse>
+                <Nav style={{display: "inline-block"}}>
+                    {props.linkContainers}
+                </Nav>
+            </BsNavbar.Collapse>
             {props.authenticated ? 
                 <Nav pullRight>
                     <ApplicationsMenu>
                         {props.applicationMenuItems}
                     </ApplicationsMenu>
                 <ProfileInfoMenu initials={props.profile.initials} name={props.profile.name} accountName={props.profile.accountName} phone={props.profile.phone} email={props.profile.email} />
-                </Nav> 
+                </Nav>
             : null}
         </BsNavbar>
         <ReperioBar/>
