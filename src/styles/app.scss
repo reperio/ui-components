@@ -316,7 +316,7 @@ hr {
     background-color: white;
     padding: 6px 16px 3px 16px;
     border-radius: 4px;
-    border-width: 0.5 0.5 5 0.5 !important;
+    border-width: 1 1 5 1 !important;
     border-style: solid;
     min-height: $min-input-height;
     transition: 0.25s;
@@ -435,7 +435,7 @@ hr {
 .#{$namespace}-text-input {
     width: 100%;
     border-color: $reperio-input-border;
-    border-bottom-width: 0.5px !important;
+    border-bottom-width: 1px !important;
     padding-bottom: 4.5px;
     font: 16px/1.5em 'Nunito Sans', sans-serif;
     font-weight: lighter;
@@ -470,7 +470,7 @@ hr {
     font-weight: lighter;
     background-color: #fff;
     border-color: $reperio-input-border;
-    border-bottom-width: 0.5px !important;
+    border-bottom-width: 1px !important;
     padding-bottom: 4.5px;
     &:focus-within {
         color: $reperio-blue;
@@ -662,7 +662,7 @@ hr {
 .Select-control {
     background-color: white;
     border-radius: 4px;
-    border-width: 0.5 0.5 5 0.5;
+    border-width: 1 1 5 1;
     border-style: solid;
     border-color: $reperio-input-border;
     min-height: $min-input-height;
@@ -673,7 +673,7 @@ hr {
 
 .Select-multi-value-wrapper {
     border-color: $reperio-input-border;
-    border-bottom-width: 0.5px !important;
+    border-bottom-width: 1px !important;
     font: 16px/1.5em 'Nunito Sans', sans-serif;
     font-weight: lighter;
     &:focus-within {
@@ -699,7 +699,7 @@ hr {
 
     &>.Select-control {
         border-color: $reperio-input-border;
-        border-bottom-width: 0.5px;
+        border-bottom-width: 1px;
         outline: transparent !important;
         padding: 0px 16px;
     }
@@ -726,7 +726,7 @@ hr {
 .Select.has-value.is-clearable.is-searchable.Select--multi {
     &>.Select-control {
         border-color: $reperio-input-border;
-        border-bottom-width: 0.5px;
+        border-bottom-width: 1px;
         outline: transparent !important;
         padding: 0px 16px;
     }
