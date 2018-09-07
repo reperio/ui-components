@@ -31,7 +31,7 @@ const Navbar: React.SFC<NavbarProps> = props => {
                     <ApplicationsMenu>
                         {props.applicationMenuItems}
                     </ApplicationsMenu>
-                <ProfileInfoMenu initials={props.profile.initials} name={props.profile.name} accountName={props.profile.accountName} phone={props.profile.phone} email={props.profile.email} />
+                <ProfileInfoMenu onLogout={props.profile.onLogout} initials={props.profile.initials} name={props.profile.name} accountName={props.profile.accountName} phone={props.profile.phone} email={props.profile.email} />
                 </Nav>
             : null}
             </BsNavbar.Collapse>
