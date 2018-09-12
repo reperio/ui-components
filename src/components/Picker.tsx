@@ -3,6 +3,7 @@ import Select from 'react-select';
 
 interface PickerProps {
     pickerValue: any,
+    value: any,
     placeholder?: string,
     onChange?(event:any): void,
     options: Array<any>,
@@ -12,7 +13,7 @@ interface PickerProps {
 
 const Picker: React.SFC<PickerProps> = props => {
     return <Select
-        value={props.pickerValue}
+        value={props.pickerValue ? props.pickerValue : props.value}
         placeholder={props.placeholder}
         onChange={props.onChange}
         options={props.options}

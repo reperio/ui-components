@@ -1,6 +1,6 @@
 {
   "name": "@reperio/ui-components",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Reperio UI Component Library",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
