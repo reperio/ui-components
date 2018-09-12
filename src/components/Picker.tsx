@@ -13,7 +13,7 @@ interface PickerProps {
 
 const Picker: React.SFC<PickerProps> = props => {
     return <Select
-        value={props.pickerValue ? props.pickerValue : props.value}
+        value={props.pickerValue !=  null ? props.pickerValue : props.value}
         placeholder={props.placeholder}
         onChange={props.onChange}
         options={props.options}
