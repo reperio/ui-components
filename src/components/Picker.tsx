@@ -2,7 +2,7 @@ import * as React from "react"
 import Select from 'react-select';
 
 interface PickerProps {
-    pickerValue: any,
+    pickerValue?: any,
     value: any,
     placeholder?: string,
     onChange?(event:any): void,
