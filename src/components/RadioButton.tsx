@@ -7,11 +7,12 @@ interface RadioButtonProps {
     id?: string,
     disabled?: boolean,
     value: string,
-    selectedOption: string
+    selectedOption: string,
+    title?: string
 }
 
 const RadioButton:React.SFC<RadioButtonProps> = props => {
-    return <label className="r-checkbox-container">
+    return <label className="r-checkbox-container" title={props.title}>
         {props.label}
         <input type="radio" name={props.name} checked={props.selectedOption === props.value} value={props.value} onChange={props.onChange} id={props.id} disabled={props.disabled} />
         <span className="r-radio-checkmark"></span>

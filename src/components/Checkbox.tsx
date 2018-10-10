@@ -6,11 +6,12 @@ interface CheckboxProps {
     onChange?(event: any): void,
     name?: string,
     id?: string,
-    disabled?: boolean
+    disabled?: boolean,
+    title?: string
 }
 
 const Checkbox:React.SFC<CheckboxProps> = props => {
-    return <label className="r-checkbox-container">
+    return <label className="r-checkbox-container" title={props.title}>
         {props.label}
         <input type="checkbox" checked={props.checked} onChange={props.onChange} name={props.name} id={props.id} disabled={props.disabled} />
         <span className="r-checkbox"></span>

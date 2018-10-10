@@ -8,11 +8,12 @@ interface ButtonProps {
     disabled?: boolean,
     type?: string,
     wide?: boolean,
-    children?: any
+    children?: any,
+    title?: string
 }
 
 const Button:React.SFC<ButtonProps> = props => {
-    return <button type={props.type} name={props.name} className={`r-form-control r-btn r-${props.color} ${props.wide ? 'r-wide-btn' : ''}`} onClick={props.onClick} disabled={props.disabled}>{props.children}{props.text}</button>;
+    return <button type={props.type} name={props.name} title={props.title} className={`r-form-control r-btn r-${props.color} ${props.wide ? 'r-wide-btn' : ''}`} onClick={props.onClick} disabled={props.disabled}>{props.children}{props.text}</button>;
 }
 
 Button.defaultProps = {
