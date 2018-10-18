@@ -11,7 +11,8 @@ import { ProfileInfoMenu } from './components/ProfileInfoMenu'
 import { RadioButton, RadioButtonElement} from './components/RadioButton';
 import { Textbox, TextboxElement} from './components/Textbox';
 import { Textarea, TextareaElement} from './components/Textarea';
+import { TitleBar } from './components/TitleBar';
 import { Grid } from './components/Grid';
 import { Wrapper } from './components/Wrapper';
 
-export {Anchor, AnchorElement, ApplicationsMenu, ApplicationMenuItem, Button, ButtonElement, Checkbox, CheckboxElement, Datepicker, DatepickerElement, Navbar, LinkContainer, NavItem, Picker, PickerElement, RadioButton, RadioButtonElement, Textbox, TextboxElement, Grid, Wrapper, ProfileInfoMenu, Textarea, TextareaElement};
+export {Anchor, AnchorElement, ApplicationsMenu, ApplicationMenuItem, Button, ButtonElement, Checkbox, CheckboxElement, Datepicker, DatepickerElement, Navbar, LinkContainer, NavItem, Picker, PickerElement, RadioButton, RadioButtonElement, Textbox, TextboxElement, TitleBar, Grid, Wrapper, ProfileInfoMenu, Textarea, TextareaElement};

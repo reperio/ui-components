@@ -2642,6 +2642,10 @@ first-chunk-stream@^2.0.0:
   dependencies:
     readable-stream "^2.0.2"
 
+flexboxgrid@^6.3.1:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/flexboxgrid/-/flexboxgrid-6.3.1.tgz#e99898afc07b7047722bb81a958a5fba4d4e20fd"
+
 flow-parser@^0.*:
   version "0.78.0"
   resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.78.0.tgz#4ec829a97fa68cff6e97691dfff7b6ddebbc187c"
