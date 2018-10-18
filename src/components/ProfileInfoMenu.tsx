@@ -11,7 +11,7 @@ interface ProfileInfoMenuProps {
 }
 
 const ProfileInfoMenu: React.SFC<ProfileInfoMenuProps> = props => {
-    return <DropdownButton className="r-profile-container"
+    return <DropdownButton pullRight className="r-profile-container"
         id="profileInfo"
         title={
             <div className="r-profile">

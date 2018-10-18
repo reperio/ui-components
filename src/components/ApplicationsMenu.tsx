@@ -5,7 +5,7 @@ interface ApplicationsMenuProps {
 }
 
 const ApplicationsMenu : React.SFC<ApplicationsMenuProps> = props => {
-    return <DropdownButton className="r-applications-container"
+    return <DropdownButton pullRight className="r-applications-container"
         id="applications"
         title={
             <div className="r-applications" >
