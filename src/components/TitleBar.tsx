@@ -6,7 +6,8 @@ import { ReperioBar } from './ReperioBar';
 interface TitleBarProps {
     title?: string,
     profile: ProfileInfoMenuProps,
-    applicationMenuItems: any[]
+    applicationMenuItems: any[],
+    isAuthenticated: boolean
 }
 
 const TitleBar: React.SFC<TitleBarProps> = props => {
@@ -16,12 +17,14 @@ const TitleBar: React.SFC<TitleBarProps> = props => {
             <div className="title-bar-title">
                 Test Title {props.title}
             </div>
-            <div className="title-bar-right-items">
-                <ApplicationsMenu>
-                    {props.applicationMenuItems}
-                </ApplicationsMenu>
-                <ProfileInfoMenu onLogout={props.profile.onLogout} initials={props.profile.initials} name={props.profile.name} accountName={props.profile.accountName} phone={props.profile.phone} email={props.profile.email} />
-            </div>
+            {props.isAuthenticated ?
+                <div className="title-bar-right-items">
+                    <ApplicationsMenu>
+                        {props.applicationMenuItems}
+                    </ApplicationsMenu>
+                    <ProfileInfoMenu onLogout={props.profile.onLogout} initials={props.profile.initials} name={props.profile.name} accountName={props.profile.accountName} phone={props.profile.phone} email={props.profile.email} />
+                </div>
+            : null}
         </div>
     </div >
 }
