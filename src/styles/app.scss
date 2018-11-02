@@ -127,9 +127,7 @@ h3 {
 }
 
 .nav-menu-container {
-    flex-direction: column;
-    flex: 1 0 300px;
-    height: 100%;
+    width: 300px;
 }
 
 .navbar {
@@ -356,7 +354,7 @@ hr {
     width: 100%;
 }
 
-.#{$namespace}-column-direction {
+.#{$namespace}-wrapper-column-direction {
     flex-direction: column;
 }
 
@@ -373,6 +371,18 @@ hr {
     padding-left: 10px;
     padding-right: 10px;
     flex: 1;
+}
+
+.#{$namespace}-row-child-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 2;
+}
+
+.#{$namespace}-row-child-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 3;
 }
 
 .#{$namespace}-form-control {
