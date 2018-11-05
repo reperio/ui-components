@@ -14,5 +14,34 @@ import { Textarea, TextareaElement} from './components/Textarea';
 import { TitleBar } from './components/TitleBar';
 import { Grid } from './components/Grid';
 import { Wrapper } from './components/Wrapper';
+import { EditablePanel, EditablePanelOverlay } from './components/EditablePanel';
 
-export {Anchor, AnchorElement, ApplicationsMenu, ApplicationMenuItem, Button, ButtonElement, Checkbox, CheckboxElement, Datepicker, DatepickerElement, Navbar, LinkContainer, NavItem, Picker, PickerElement, RadioButton, RadioButtonElement, Textbox, TextboxElement, TitleBar, Grid, Wrapper, ProfileInfoMenu, Textarea, TextareaElement};
+export {
+    Anchor, 
+    AnchorElement, 
+    ApplicationsMenu, 
+    ApplicationMenuItem, 
+    Button, 
+    ButtonElement, 
+    Checkbox, 
+    CheckboxElement, 
+    Datepicker, 
+    DatepickerElement, 
+    Navbar, 
+    LinkContainer, 
+    NavItem, 
+    Picker, 
+    PickerElement, 
+    RadioButton, 
+    RadioButtonElement, 
+    Textbox, 
+    TextboxElement, 
+    TitleBar, 
+    Grid, 
+    Wrapper, 
+    ProfileInfoMenu, 
+    Textarea, 
+    TextareaElement, 
+    EditablePanel,
+    EditablePanelOverlay
+};
