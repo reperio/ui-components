@@ -15,7 +15,7 @@ const TitleBar: React.SFC<TitleBarProps> = props => {
         <ReperioBar/>
         <div className="title-bar-content">
             <div className="title-bar-title">
-                Test Title {props.title}
+                {props.title}
             </div>
             {props.isAuthenticated ?
                 <div className="title-bar-right-items">
