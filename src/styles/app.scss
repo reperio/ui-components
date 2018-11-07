@@ -1392,6 +1392,11 @@ div &.open &.#{$namespace}-applications-container>.#{$namespace}-applications>.#
     position: relative;
     cursor: pointer;
 }
+
+.#{$namespace}-wrapper-editable-panel-disabled {
+    position: relative;
+    cursor: default;
+  }  
   
 .#{$namespace}-wrapper-editable-panel-open {
     position: relative;
