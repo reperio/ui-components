@@ -1387,3 +1387,47 @@ div &.open &.#{$namespace}-applications-container>.#{$namespace}-applications>.#
         font-size: 26px;
     }
 }
+
+.#{$namespace}-wrapper-editable-panel {
+    position: relative;
+    cursor: pointer;
+}
+
+.#{$namespace}-wrapper-editable-panel-disabled {
+    position: relative;
+    cursor: default;
+  }  
+  
+.#{$namespace}-wrapper-editable-panel-open {
+    position: relative;
+}
+  
+.#{$namespace}-editable-panel-overlay {
+    position: fixed;
+    background-color: #333;
+    opacity: 0.7;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+  
+.#{$namespace}-editable-panel-controls {
+    position: absolute;
+    right: 0;
+    padding-top: 15px;
+    padding-right: 10px;
+    display: flex;
+}
+  
+.#{$namespace}-editable-panel-control-item {
+    flex: 1;
+    cursor: pointer;
+    min-width: 25px;
+}
+  
+.#{$namespace}-editable-panel-form {
+    margin: 0px;
+    flex: 1;
+}
