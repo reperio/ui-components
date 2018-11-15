@@ -4,7 +4,6 @@ import { LinkContainer } from 'react-router-bootstrap'
 import Logo from '../assets/rep-logo-white.png';
 
 interface NavbarProps {
-    linkContainers: any[],
     authenticated: boolean,
     applicationName: string
 }
@@ -19,7 +18,7 @@ const Navbar: React.SFC<NavbarProps> = props => {
                 <div id='applicationName'>{props.applicationName}</div>
             </div>
             <Nav>
-                {props.linkContainers}
+                {props.children}
             </Nav>
         </BsNavbar>
     </div >
