@@ -63,3 +63,4 @@ lib
 # vim swap files
 *.swp
 *.swo
+.idea
