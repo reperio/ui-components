@@ -4,7 +4,7 @@ import { ProfileInfoMenu, ProfileInfoMenuProps } from './ProfileInfoMenu'
 import { ReperioBar } from './ReperioBar';
 
 interface TitleBarProps {
-    title?: string,
+    title?: JSX.Element,
     profile: ProfileInfoMenuProps,
     applicationMenuItems: any[],
     isAuthenticated: boolean
