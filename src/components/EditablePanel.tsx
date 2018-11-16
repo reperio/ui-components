@@ -14,7 +14,7 @@ const EditablePanelOverlay = () => <div className="r-editable-panel-overlay"></d
 const EditablePanel: React.SFC<PanelProps> = props => (
     <fieldset disabled={!props.active} className={`${props.active ? 'r-wrapper-editable-panel-open' : props.permissionToEdit ? 'r-wrapper-editable-panel' : 'r-wrapper-editable-panel-disabled'} row`} 
         style={props.active ? {zIndex: 10} : {}}
-        onClick={props.onClick}>
+        onClick={props.permissionToEdit ? props.onClick : null}>
             {props.active ?                                     
                 <div className="r-editable-panel-controls">
                     <i className="r-editable-panel-control-item fa fa-ban fa-lg" onClick={() => props.cancel()}></i>
