@@ -4,8 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 import Logo from '../assets/rep-logo-white.png';
 
 interface NavbarProps {
-    authenticated: boolean,
-    applicationName: string
+    applicationName?: string
 }
 
 const Navbar: React.SFC<NavbarProps> = props => {
