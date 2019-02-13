@@ -5,16 +5,28 @@ interface TextboxProps {
     placeholder?: string,
     onChange?(event: any): void,
     disabled?: boolean,
-    type?: string
+    size?: number,
+    fullWidth?: boolean
 }
 
+const fullWidthStyle = {
+    width: '100%'
+};
+
 const Textbox:React.SFC<TextboxProps> = props => {
-    return <input type={props.type} className="r-form-control r-text-input" value={props.value} placeholder={props.placeholder} onChange={props.onChange} disabled={props.disabled} />
+    return <input type='text' 
+                  className="r-form-control r-text-input" 
+                  value={props.value} 
+                  placeholder={props.placeholder} 
+                  onChange={props.onChange} 
+                  disabled={props.disabled}
+                  size={props.size}
+                  style={props.fullWidth ? fullWidthStyle : null} />
 }
 
 Textbox.defaultProps = {
     disabled: false,
-    type: "text"
+    fullWidth: true
 }
 
 const TextboxElement = (props:any) => {
