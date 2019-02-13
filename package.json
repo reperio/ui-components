@@ -1,13 +1,12 @@
 {
   "name": "@reperio/ui-components",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Reperio UI Component Library",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
     "build": "./node_modules/.bin/webpack --mode=production",
     "clean": "rm -rf ./lib",
-    "deploy": "npm run clean && npm run build && npm publish --access public",
     "start": "./node_modules/.bin/webpack --watch"
   },
   "repository": {
