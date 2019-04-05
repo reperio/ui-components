@@ -10,6 +10,7 @@ import { Picker, PickerElement } from './components/Picker';
 import { ProfileInfoMenu } from './components/ProfileInfoMenu'
 import { RadioButton, RadioButtonElement} from './components/RadioButton';
 import { Textbox, TextboxElement} from './components/Textbox';
+import { ProtectedTextbox, ProtectedTextboxElement} from './components/ProtectedTextbox';
 import { Textarea, TextareaElement} from './components/Textarea';
 import { TitleBar } from './components/TitleBar';
 import { Grid } from './components/Grid';
@@ -36,6 +37,8 @@ export {
     RadioButtonElement, 
     Textbox, 
     TextboxElement, 
+    ProtectedTextbox, 
+    ProtectedTextboxElement, 
     TitleBar, 
     Grid, 
     Wrapper, 
