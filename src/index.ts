@@ -16,6 +16,7 @@ import { TitleBar } from './components/TitleBar';
 import { Grid } from './components/Grid';
 import { Wrapper } from './components/Wrapper';
 import { EditablePanel, EditablePanelOverlay } from './components/EditablePanel';
+import { Validations } from './validations/Validations';
 
 export {
     Anchor, 
@@ -46,5 +47,6 @@ export {
     Textarea, 
     TextareaElement, 
     EditablePanel,
-    EditablePanelOverlay
+    EditablePanelOverlay,
+    Validations
 };

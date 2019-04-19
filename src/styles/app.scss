@@ -416,8 +416,6 @@ hr {
 }
 
 .#{$namespace}-form-control {
-    margin-left: 5px;
-    margin-right: 5px;
     background-color: white;
     padding: 6px 16px 3px 16px;
     border-radius: 4px;
@@ -760,6 +758,10 @@ hr {
 }
 
 /* reset and override some of the React-Select styles to behave like reper.io components */
+.Select {
+    width: 100%;
+}
+
 .Select-control {
     border: none;
     box-shadow: none;
@@ -1459,4 +1461,16 @@ div &.open &.#{$namespace}-applications-container>.#{$namespace}-applications>.#
 .#{$namespace}-editable-panel-form {
     margin: 0px;
     flex: 1;
+}
+
+.#{$namespace}-error {
+    color: red;
+    margin-left: 5px;
+    display: block;
+}
+
+.#{$namespace}-warning {
+    margin-left: 5px;
+    color: orange;
+    display: block;
 }
