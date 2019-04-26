@@ -14,6 +14,6 @@ export const Validations : IValidations = {
     LessThan: max => value => value == null || value > max ? `Must be less than ${max}.` : undefined,
     Number: value => value && isNaN(Number(value)) ? 'Must be a number.' : undefined,
     Email: value => value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Invalid email address.' : undefined,
-    PhoneNumber: value => value && !/^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/i.test(value) ? 'Invalid phone number.' : undefined,
+    PhoneNumber: value => value && !/^\(?([0-9]{3})\)?[-.● ]?([0-9]{3})[-.●]?([0-9]{4})$/i.test(value) ? 'Invalid phone number.' : undefined,
     LengthEqualTo: length => value => value == null || value.length !== length ? `Must be ${length} characters.` : undefined
 }

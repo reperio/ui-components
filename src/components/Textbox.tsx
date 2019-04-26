@@ -46,7 +46,7 @@ const Textbox:React.SFC<TextboxProps> = props => {
 Textbox.defaultProps = {
     disabled: false,
     fullWidth: true
-}
+};
 
 const TextboxElement = (props:any) => {
     const {input, meta, ...rest} = props;

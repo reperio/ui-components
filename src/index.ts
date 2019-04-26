@@ -6,6 +6,7 @@ import { Button, ButtonElement } from './components/Button';
 import { Checkbox, CheckboxElement } from './components/Checkbox';
 import { Datepicker, DatepickerElement } from './components/Datepicker';
 import { Navbar, LinkContainer, NavItem } from './components/Navbar';
+import { PhoneInput, PhoneInputElement } from './components/PhoneInput';
 import { Picker, PickerElement } from './components/Picker';
 import { ProfileInfoMenu } from './components/ProfileInfoMenu'
 import { RadioButton, RadioButtonElement} from './components/RadioButton';
@@ -32,6 +33,8 @@ export {
     Navbar, 
     LinkContainer, 
     NavItem, 
+    PhoneInput,
+    PhoneInputElement,
     Picker, 
     PickerElement, 
     RadioButton, 
