@@ -6,6 +6,7 @@ import { Button, ButtonElement } from './components/Button';
 import { Checkbox, CheckboxElement } from './components/Checkbox';
 import { Datepicker, DatepickerElement } from './components/Datepicker';
 import { Navbar, LinkContainer, NavItem } from './components/Navbar';
+import { PhoneInput, PhoneInputElement } from './components/PhoneInput';
 import { Picker, PickerElement } from './components/Picker';
 import { ProfileInfoMenu } from './components/ProfileInfoMenu'
 import { RadioButton, RadioButtonElement} from './components/RadioButton';
@@ -16,6 +17,7 @@ import { TitleBar } from './components/TitleBar';
 import { Grid } from './components/Grid';
 import { Wrapper } from './components/Wrapper';
 import { EditablePanel, EditablePanelOverlay } from './components/EditablePanel';
+import { Validations } from './validations/Validations';
 
 export {
     Anchor, 
@@ -31,6 +33,8 @@ export {
     Navbar, 
     LinkContainer, 
     NavItem, 
+    PhoneInput,
+    PhoneInputElement,
     Picker, 
     PickerElement, 
     RadioButton, 
@@ -46,5 +50,6 @@ export {
     Textarea, 
     TextareaElement, 
     EditablePanel,
-    EditablePanelOverlay
+    EditablePanelOverlay,
+    Validations
 };
