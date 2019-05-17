@@ -1474,3 +1474,30 @@ div &.open &.#{$namespace}-applications-container>.#{$namespace}-applications>.#
     color: orange;
     display: block;
 }
+
+.r-org-switch-container {
+    display: flex;
+}
+
+.r-org-switcher {
+    cursor: pointer;
+}
+
+.r-org-switcher-icon {
+    height: 36px;
+    max-height: 36px;
+    width: 36px;
+    max-width: 36px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.r-org-list-container {
+    display: inline;
+    flex-direction: column;
+}
+
+.r-org-list-item {
+    padding: 10px;
+    text-align: left;
+}
