@@ -1,29 +1,27 @@
 import * as React from 'react';
-import { DropdownButton } from 'react-bootstrap';
-import MenuIcon from '../assets/organization-menu.png';
-import { User, UserOrganization } from '@reperio/core-connector';
+import { DropdownButton, Dropdown } from 'react-bootstrap';
+import { Organization } from '@reperio/core-connector';
 
 interface OrganizationSwitchMenuProps {
-    user: User,
-    selectedOrganization: UserOrganization,
-    onSelectOrganization? (organization:UserOrganization): void
+    organizations: Organization[],
+    selectedOrganization: Organization,
+    onSelectOrganization(organization: Organization): void
 }
 
-const OrganizationSwitchMenu : React.SFC<OrganizationSwitchMenuProps> = props => {
+const OrganizationSwitchMenu: React.SFC<OrganizationSwitchMenuProps> = props => {
     return <DropdownButton pullRight className="r-org-switch-container"
+        bsPrefix='r-'
         id="orgSwitcher"
         title={
-            <div className="r-org-switcher">
-                <img className="r-org-switcher-icon" src={MenuIcon} />
+            <div className="title-bar-organization-title">
+                {props.selectedOrganization ? props.selectedOrganization.name : 'No Organization Selected'}
             </div>
         }
-        noCaret>
-        <div className="r-org-list-container">
-            {props.user.userOrganizations ? props.user.userOrganizations.map((x: UserOrganization)=>
-                <div key={x.organizationId} className="r-org-list-item" onClick={() => props.onSelectOrganization(x)}>{x.organization.name}</div>
-            ) : null}
-        </div>
+        onSelect={(e: any) => props.onSelectOrganization(e)}>
+        {props.organizations.map((x: Organization) =>
+            <Dropdown.Item key={x.id} className="r-org-list-item" eventKey={x}>{x.name}</Dropdown.Item>
+        )}
     </DropdownButton>;
 }
 
-export {OrganizationSwitchMenu, OrganizationSwitchMenuProps};
+export { OrganizationSwitchMenu, OrganizationSwitchMenuProps };

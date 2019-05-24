@@ -20,9 +20,7 @@
   },
   "homepage": "https://github.com/reperio/ui-components#readme",
   "dependencies": {
-    "@types/react-bootstrap": "^0.32.13",
-    "@types/react-router-bootstrap": "^0.24.5",
-    "@types/react-router-dom": "^4.3.0",
+    "@reperio/core-connector": "^3.5.0",
     "flexboxgrid": "^6.3.1",
     "moment": "^2.22.2",
     "react": "^16.4.2",
@@ -38,8 +36,11 @@
   "devDependencies": {
     "@types/moment": "^2.13.0",
     "@types/react": "^16.4.7",
+    "@types/react-bootstrap": "^0.32.13",
     "@types/react-datepicker": "^1.1.6",
     "@types/react-dom": "^16.0.4",
+    "@types/react-router-bootstrap": "^0.24.5",
+    "@types/react-router-dom": "^4.3.0",
     "@types/react-select": "^1.2.7",
     "@types/react-table": "^6.7.12",
     "autoprefixer": "^9.1.0",
