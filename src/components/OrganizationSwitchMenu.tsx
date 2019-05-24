@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { DropdownButton, Dropdown } from 'react-bootstrap';
+import * as classNames from 'classnames';
+import { DropdownButton, MenuItem } from 'react-bootstrap';
 import { Organization } from '@reperio/core-connector';
 
 interface OrganizationSwitchMenuProps {
@@ -10,7 +11,6 @@ interface OrganizationSwitchMenuProps {
 
 const OrganizationSwitchMenu: React.SFC<OrganizationSwitchMenuProps> = props => {
     return <DropdownButton pullRight className="r-org-switch-container"
-        bsPrefix='r-'
         id="orgSwitcher"
         title={
             <div className="title-bar-organization-title">
@@ -19,7 +19,7 @@ const OrganizationSwitchMenu: React.SFC<OrganizationSwitchMenuProps> = props => 
         }
         onSelect={(e: any) => props.onSelectOrganization(e)}>
         {props.organizations.map((x: Organization) =>
-            <Dropdown.Item key={x.id} className="r-org-list-item" eventKey={x}>{x.name}</Dropdown.Item>
+            <MenuItem key={x.id} className={classNames({ "r-org-list-item": true, "r-org-list-item-active": props.selectedOrganization ? x.id === props.selectedOrganization.id : false})} eventKey={x}>{x.name}</MenuItem>
         )}
     </DropdownButton>;
 }

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DropdownButton, Dropdown} from 'react-bootstrap';
+import {DropdownButton, MenuItem} from 'react-bootstrap';
 
 interface ProfileInfoMenuProps {
     initials: string,
@@ -25,8 +25,8 @@ const ProfileInfoMenu: React.SFC<ProfileInfoMenuProps> = props => {
             {props.phone}<br />
             {props.email}<br />
         </span>
-        <Dropdown.Item divider />
-        <Dropdown.Item eventKey='3' onClick={props.onLogout}><i className="fa fa-sign-out fa-fw"></i> Logout</Dropdown.Item>
+        <MenuItem divider />
+        <MenuItem eventKey='3' onClick={props.onLogout}><i className="fa fa-sign-out fa-fw"></i> Logout</MenuItem>
     </DropdownButton>
 }
 
