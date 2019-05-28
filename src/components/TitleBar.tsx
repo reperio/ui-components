@@ -1,13 +1,19 @@
 import * as React from 'react';
 import { ApplicationsMenu } from './ApplicationsMenu'
 import { ProfileInfoMenu, ProfileInfoMenuProps } from './ProfileInfoMenu'
+import { OrganizationSwitchMenu, OrganizationSwitchMenuProps } from './OrganizationSwitchMenu'
 import { ReperioBar } from './ReperioBar';
+import { User, Organization } from '@reperio/core-connector';
 
 interface TitleBarProps {
     title?: JSX.Element | string,
     profile: ProfileInfoMenuProps,
+    user?: User,
     applicationMenuItems: any[],
-    isAuthenticated: boolean
+    isAuthenticated: boolean,
+    organizations?: Organization[],
+    selectedOrganization?: Organization,
+    onSelectOrganization? (organization:Organization): void
 }
 
 const TitleBar: React.SFC<TitleBarProps> = props => {
@@ -19,6 +25,10 @@ const TitleBar: React.SFC<TitleBarProps> = props => {
             </div>
             {props.isAuthenticated ?
                 <div className="title-bar-right-items">
+                    {props.organizations ?
+                        <OrganizationSwitchMenu organizations={props.organizations} selectedOrganization={props.selectedOrganization} onSelectOrganization={props.onSelectOrganization}/>
+                        : null
+                    }
                     <ApplicationsMenu>
                         {props.applicationMenuItems}
                     </ApplicationsMenu>

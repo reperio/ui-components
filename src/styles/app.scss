@@ -1058,6 +1058,20 @@ hr {
     }
 }
 
+.#{$namespace}-org-switch-container {
+    &.btn-default {
+        background: none;
+        border: none;
+    }
+
+    & > .caret {
+        position: absolute;
+        top: calc(50% - 5px);
+        right: 10px;
+        color: $reperio-teal;
+    }
+}
+
 .#{$namespace}-applications-container-content > div:hover { 
     background-color: $reperio-placeholder-gray;
 }
@@ -1396,6 +1410,14 @@ div &.open &.#{$namespace}-applications-container>.#{$namespace}-applications>.#
             color: $reperio-blue;
         }
 
+        .title-bar-organization-title {
+            font-size: 18px;
+            display: flex;
+            padding: 6px 12px;
+            font-family: 'Nunito Sans', sans-serif;
+            color: $reperio-teal;
+        }
+
         .title-bar-right-items {
             display: flex;
             justify-content: flex-end;
@@ -1473,4 +1495,58 @@ div &.open &.#{$namespace}-applications-container>.#{$namespace}-applications>.#
     margin-left: 5px;
     color: orange;
     display: block;
+}
+
+.r-org-switch-container {
+    display: flex;
+}
+
+.r-org-switcher {
+    cursor: pointer;
+}
+
+.r-org-switcher-icon {
+    height: 36px;
+    max-height: 36px;
+    width: 36px;
+    max-width: 36px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.r-org-list-container {
+    display: inline;
+    flex-direction: column;
+}
+
+.dropdown-menu[aria-labelledby="orgSwitcher"] {
+    padding: 0;
+}
+
+.#{$namespace}-org-list-item {
+    padding: 0;
+    text-align: left;
+
+    &>a {
+        padding: 10px 15px !important;
+        text-align: center;
+    }
+
+    &.#{$namespace}-org-list-item-active>a {
+        color: $reperio-teal !important;
+    }
+
+    &:hover {
+        background-color: #fff;
+    }
+
+    &:hover>a {
+        background-color: #fff;
+        color:$reperio-blue !important;
+    }
+
+    &:hover>a:hover {
+        background-color: #fff;
+        color: $reperio-blue !important;
+    }
 }
