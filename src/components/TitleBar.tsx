@@ -29,9 +29,10 @@ const TitleBar: React.SFC<TitleBarProps> = props => {
                         <OrganizationSwitchMenu organizations={props.organizations} selectedOrganization={props.selectedOrganization} onSelectOrganization={props.onSelectOrganization}/>
                         : null
                     }
-                    <ApplicationsMenu>
+                    {/* removed until we have more than one application */}
+                    {/* <ApplicationsMenu>
                         {props.applicationMenuItems}
-                    </ApplicationsMenu>
+                    </ApplicationsMenu> */}
                     <ProfileInfoMenu onLogout={props.profile.onLogout} initials={props.profile.initials} name={props.profile.name} accountName={props.profile.accountName} phone={props.profile.phone} email={props.profile.email} />
                 </div>
             : null}
