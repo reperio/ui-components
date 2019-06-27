@@ -24,8 +24,6 @@ const Picker: React.SFC<PickerProps> = props => {
         style.borderColor = 'red';
     }
 
-    console.log(props.meta);
-
     return <>
             <Select
                 value={props.pickerValue !=  null ? props.pickerValue : props.value}
