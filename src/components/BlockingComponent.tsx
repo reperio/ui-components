@@ -1,5 +1,5 @@
 import React from 'react';
-import LoadingSpinner from './LoadingSpinner';
+import { LoadingSpinner } from './LoadingSpinner';
 
 export class BlockingComponent extends React.Component<{readyToLoad: boolean}> {
     render() {

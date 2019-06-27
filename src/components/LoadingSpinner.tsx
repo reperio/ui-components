@@ -27,7 +27,7 @@ const imgStyle: CSSProperties = {
     height: "100%"
 };
 
-const loadingSpinner = (props: any) => (
+const LoadingSpinner: React.SFC<any> = props => (
     <div style={topDivStyle}>
         <div style={secondDivStyle}>
             <div style={thirdDivStyle}>
@@ -37,4 +37,4 @@ const loadingSpinner = (props: any) => (
     </div>
 );
 
-export default loadingSpinner;
+export {LoadingSpinner};

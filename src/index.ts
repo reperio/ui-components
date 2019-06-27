@@ -19,6 +19,8 @@ import { Wrapper } from './components/Wrapper';
 import { EditablePanel, EditablePanelOverlay } from './components/EditablePanel';
 import { OrganizationSwitchMenu } from './components/OrganizationSwitchMenu';
 import { Validations } from './validations/Validations';
+import { BlockingComponent } from './components/BlockingComponent';
+import { LoadingSpinner } from './components/LoadingSpinner';
 
 export {
     Anchor,
@@ -53,5 +55,7 @@ export {
     EditablePanel,
     EditablePanelOverlay,
     Validations,
-    OrganizationSwitchMenu
+    OrganizationSwitchMenu,
+    BlockingComponent,
+    LoadingSpinner
 };
