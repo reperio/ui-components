@@ -22,7 +22,6 @@ const fullWidthStyle = {
 
 const PhoneInput: React.SFC<PhoneInputProps> = props => {
     let style = props.style ? { ...props.style } : {};
-    console.log(props.meta);
 
     if (props.meta && props.meta.touched && props.meta.error) {
         style.borderColor = 'red';
