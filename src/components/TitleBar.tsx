@@ -13,7 +13,8 @@ interface TitleBarProps {
     isAuthenticated: boolean,
     organizations?: Organization[],
     selectedOrganization?: Organization,
-    onSelectOrganization? (organization:Organization): void
+    onSelectOrganization? (organization:Organization): void,
+    supportNumber?: string
 }
 
 const TitleBar: React.SFC<TitleBarProps> = props => {
@@ -25,6 +26,12 @@ const TitleBar: React.SFC<TitleBarProps> = props => {
             </div>
             {props.isAuthenticated ?
                 <div className="title-bar-right-items">
+                    {props.supportNumber ?
+                        <div className="title-bar-support-number">
+                            Need help? Call: {props.supportNumber}
+                        </div>
+                        : null
+                    }
                     {props.organizations ?
                         <OrganizationSwitchMenu organizations={props.organizations} selectedOrganization={props.selectedOrganization} onSelectOrganization={props.onSelectOrganization}/>
                         : null
