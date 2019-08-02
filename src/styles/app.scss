@@ -1422,6 +1422,13 @@ div &.open &.#{$namespace}-applications-container>.#{$namespace}-applications>.#
             justify-content: flex-end;
             margin-left: auto;
         }
+
+        .title-bar-support-number {
+            font-size: 24px;
+            display: flex;
+            padding: 6px 12px;
+            color: dimgray;
+        }
     }
 }
 
