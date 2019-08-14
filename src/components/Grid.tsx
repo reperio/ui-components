@@ -9,7 +9,8 @@ interface GridProps {
     filterable?: boolean
     manual?: boolean
     pages?: any,
-    rowClick?: any
+    rowClick?: any,
+    pageSizeOptions?: number[]
 }
 
 const Grid:React.SFC<GridProps> = props => {
@@ -18,6 +19,7 @@ const Grid:React.SFC<GridProps> = props => {
         columns={props.columns}
         data={props.data}
         defaultPageSize={props.defaultPageSize}
+        pageSizeOptions={props.pageSizeOptions}
         defaultSorted={props.defaultSorted}
         filterable={props.filterable}
         manual={props.manual}
@@ -28,7 +30,8 @@ const Grid:React.SFC<GridProps> = props => {
 Grid.defaultProps = {
     defaultPageSize: 20,
     filterable: true,
-    manual: false
+    manual: false,
+    pageSizeOptions: [10, 15, 20, 25, 50, 100]
 }
 
 export { Grid };
