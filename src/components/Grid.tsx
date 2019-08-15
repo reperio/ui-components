@@ -19,6 +19,7 @@ const Grid:React.SFC<GridProps> = props => {
         columns={props.columns}
         data={props.data}
         defaultPageSize={props.defaultPageSize}
+        minRows={1}
         pageSizeOptions={props.pageSizeOptions}
         defaultSorted={props.defaultSorted}
         filterable={props.filterable}
