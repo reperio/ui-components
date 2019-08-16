@@ -4,8 +4,6 @@ import {DropdownButton, MenuItem} from 'react-bootstrap';
 interface ProfileInfoMenuProps {
     initials: string,
     name: string,
-    accountName: string,
-    phone: string,
     email: string
     onLogout?(event: any): void
 }
@@ -21,8 +19,6 @@ const ProfileInfoMenu: React.SFC<ProfileInfoMenuProps> = props => {
         noCaret>
         <span className="r-profile-content">
             {props.name}<br />
-            {props.accountName}<br />
-            {props.phone}<br />
             {props.email}<br />
         </span>
         <MenuItem divider />

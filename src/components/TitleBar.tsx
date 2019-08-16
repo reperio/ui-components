@@ -40,7 +40,7 @@ const TitleBar: React.SFC<TitleBarProps> = props => {
                     {/* <ApplicationsMenu>
                         {props.applicationMenuItems}
                     </ApplicationsMenu> */}
-                    <ProfileInfoMenu onLogout={props.profile.onLogout} initials={props.profile.initials} name={props.profile.name} accountName={props.profile.accountName} phone={props.profile.phone} email={props.profile.email} />
+                    <ProfileInfoMenu onLogout={props.profile.onLogout} initials={props.profile.initials} name={props.profile.name} email={props.profile.email} />
                 </div>
             : null}
         </div>
