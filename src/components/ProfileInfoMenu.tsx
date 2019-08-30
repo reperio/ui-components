@@ -22,7 +22,7 @@ const ProfileInfoMenu: React.SFC<ProfileInfoMenuProps> = props => {
             {props.email}<br />
         </span>
         <MenuItem divider />
-        <MenuItem eventKey='3' onClick={props.onLogout}><i className="fa fa-sign-out fa-fw"></i> Logout</MenuItem>
+        <MenuItem eventKey='3' className="logout-menu-item" onClick={props.onLogout}><i className="fa fa-sign-out fa-fw"></i> Logout</MenuItem>
     </DropdownButton>
 }
 
