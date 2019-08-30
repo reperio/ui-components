@@ -11,10 +11,9 @@ interface CheckboxProps {
 }
 
 const Checkbox:React.SFC<CheckboxProps> = props => {
-    return <label className="r-checkbox-container" title={props.title}>
+    return <label>
+        <input type="checkbox" checked={props.checked} onChange={props.onChange} name={props.name} id={props.id} disabled={props.disabled} style={{marginRight: 3}} />
         {props.label}
-        <input type="checkbox" checked={props.checked} onChange={props.onChange} name={props.name} id={props.id} disabled={props.disabled} />
-        <span className="r-checkbox"></span>
     </label>;
 }
 
