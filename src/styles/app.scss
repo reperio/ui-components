@@ -1315,7 +1315,7 @@ div &.open &.#{$namespace}-applications-container > .#{$namespace}-applications 
     padding: 10px;
     box-shadow: none;
     border-radius: 0;
-    border: 5px solid transparent;
+    border: 5px solid;
     border-image: url("../assets/rio-slider-colorband1.png") 5 stretch;
     border-top: 0;
     border-left: 0;
