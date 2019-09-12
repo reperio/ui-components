@@ -629,6 +629,22 @@ hr {
     }
 }
 
+@keyframes explode {
+	0%{
+		opacity: 0;
+		transform: scale(3) rotate(45deg);
+	}
+	60%{
+		opacity: 1;
+		transform: scale(0.5) rotate(45deg);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1) rotate(45deg);
+	}
+}
+
+
 .#{$namespace}-radio {
     line-height: 1rem;
 
@@ -689,6 +705,8 @@ hr {
     /*Unhide on the checked state*/
     input[type="radio"]:checked + label::after {
         content: "";
+        animation-name: explode;
+        animation-duration: 0.325s;
     }
     
     /*Adding focus styles on the outer-box of the fake checkbox*/
@@ -763,6 +781,8 @@ hr {
     /*Unhide on the checked state*/
     input[type="checkbox"]:checked + label::after {
         content: "";
+        animation-name: explode;
+        animation-duration: 0.325s;
     }
     
     /*Adding focus styles on the outer-box of the fake checkbox*/
