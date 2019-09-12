@@ -14,7 +14,7 @@ const Checkbox:React.SFC<CheckboxProps> = props => {
     return (
     <UID>
         {id => (
-            <div className="r-checkbox-new">
+            <div className="r-checkbox">
                 <input type="checkbox" name={props.name} checked={props.checked} onChange={props.onChange} id={id} disabled={props.disabled} />
                 <label htmlFor={id}>{props.label}</label>
             </div>

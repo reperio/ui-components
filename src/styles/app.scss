@@ -629,32 +629,7 @@ hr {
     }
 }
 
-.#{$namespace}-checkbox-container {
-    margin-right: 5px;
-    margin-left: 5px;
-    position: relative;
-    padding-left: 30px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-weight: normal;
-
-    /* Hide the browser's default checkbox */
-    & input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        visibility: hidden;
-    }
-
-    &:focus-within {
-        outline: auto 5px -webkit-focus-ring-color;
-    }
-}
-
-.#{$namespace}-radio-new {
+.#{$namespace}-radio {
     line-height: 1rem;
 
     input[type="radio"] {
@@ -682,7 +657,7 @@ hr {
         display: inline-block;
     }
     
-    /*Outer box of the fake checkbox*/
+    /*Outer box of the fake radio*/
     label::before{
         height: 20px;
         width: 20px;
@@ -695,7 +670,7 @@ hr {
         top: 0;
     }
     
-    /*Checkmark of the fake checkbox*/
+    /*Checkmark of the fake radio*/
     label::after {
         width:10px;
         height:10px;
@@ -723,7 +698,7 @@ hr {
     }
 }
 
-.#{$namespace}-checkbox-new {
+.#{$namespace}-checkbox {
     line-height: 1rem;
 
     input[type="checkbox"] {
@@ -794,110 +769,6 @@ hr {
     input[type="checkbox"]:focus + label::before {
         outline: 0;
         box-shadow: 0 0 6px rgb(59, 153, 252);
-    }
-}
-
-/* Create a custom checkbox */
-.#{$namespace}-checkbox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 22px;
-    width: 21px;
-    border-width: 3 !important;
-    border-color: $reperio-blue !important;
-    background-color: transparent !important;
-    border-style: solid;
-    border-radius: 4px;
-    /* Create the checkmark/indicator (hidden when not checked) */
-    &:after {
-        content: "";
-        position: absolute;
-        display: none;
-    }
-}
-
-/* custom radio button checkmark */
-.#{$namespace}-radio-checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: solid $reperio-blue;
-    /* when radio button is checked, add the blue circle */
-    &:after {
-        content: "";
-        position: absolute;
-        display: none;
-    }
-}
-
-
-/* Show the checkmark when checked */
-.#{$namespace}-checkbox-container {
-    & input:checked~.#{$namespace}-checkbox:after {
-        display: block;
-    }
-
-    & input:disabled+.#{$namespace}-checkbox {
-        border-width: 3 !important;
-        border-color: $reperio-disabled-checkbox-blue !important;
-        background-color: transparent !important;
-        border-style: solid;
-        border-radius: 4px;
-    }
-    
-    /* Style the checkmark/indicator */
-    & .#{$namespace}-checkbox:after {
-        left: 5px;
-        width: 6px;
-        height: 13px;
-        border: solid $reperio-blue;
-        border-width: 0 3px 3px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-
-    & input:disabled+.#{$namespace}-checkbox:after {
-        border: solid $reperio-disabled-checkbox-blue;
-        border-width: 0 3px 3px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-
-    & input:checked ~ .#{$namespace}-radio-checkmark:after {
-        display: block;
-    }
-
-    & input:disabled+.#{$namespace}-radio-checkmark {
-        border-width: 3 !important;
-        border-color: $reperio-disabled-checkbox-blue !important;
-        background-color: transparent !important;
-        border-style: solid;
-        border-radius: 50%;
-    }
-
-    & .#{$namespace}-radio-checkmark:after {
-        top:4px;
-        left:4px;
-        width:11px;
-        height:11px;
-        border-radius: 50%;
-        background: $reperio-blue;
-    }
-
-    & input:disabled+.#{$namespace}-radio-checkmark:after {
-        top: 4px;
-        left: 4px;
-        width: 11px;
-        height: 11px;
-        border-radius: 50%;
-        background: $reperio-disabled-checkbox-blue;
     }
 }
 

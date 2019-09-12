@@ -28,7 +28,7 @@ const RadioButton:React.SFC<RadioButtonProps> = props => {
         <UID>
             {id => (
                 <>
-                    <div className="r-radio-new">
+                    <div className="r-radio">
                         <input type="radio" name={props.name} checked={props.checked} value={props.value} onChange={props.onChange} id={id} disabled={props.disabled} style={style} />
                         <label htmlFor={id}>{props.label}</label>
                     </div>
