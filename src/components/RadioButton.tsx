@@ -1,11 +1,11 @@
-import * as React from "react"
+import * as React from "react";
+import {UID} from 'react-uid';
 
 interface RadioButtonProps {
     label: string,
     checked: boolean,
     onChange?(event: any): void,
     name?: string,
-    id?: string,
     disabled?: boolean,
     value: string,
     title?: string,
@@ -19,20 +19,23 @@ interface RadioButtonProps {
 
 const RadioButton:React.SFC<RadioButtonProps> = props => {
     let style = props.style ? {...props.style} : {};
-    style = {...style, marginRight: 3};
 
     if (props.meta && props.meta.touched && props.meta.error) {
         style.borderColor = 'red';
     }
 
     return (
-        <>
-            <label>
-                <input type="radio" name={props.name} checked={props.checked} value={props.value} onChange={props.onChange} id={props.id} disabled={props.disabled} style={style} />
-                {props.label}
-            </label>
-            {props.meta && props.meta.touched && ((props.meta.error && <span className="r-error">{props.meta.error}</span>) || (props.meta.warning && <span className="r-warning">{props.meta.warning}</span>))}
-        </>
+        <UID>
+            {id => (
+                <>
+                    <div className="r-radio-new">
+                        <input type="radio" name={props.name} checked={props.checked} value={props.value} onChange={props.onChange} id={id} disabled={props.disabled} style={style} />
+                        <label htmlFor={id}>{props.label}</label>
+                    </div>
+                    {props.meta && props.meta.touched && ((props.meta.error && <span className="r-error">{props.meta.error}</span>) || (props.meta.warning && <span className="r-warning">{props.meta.warning}</span>))}
+                </>
+            )}
+        </UID>
     );
 };
 

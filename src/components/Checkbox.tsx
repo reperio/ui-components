@@ -1,20 +1,26 @@
 import * as React from "react"
+import {UID} from 'react-uid';
 
 interface CheckboxProps {
     label: string,
     checked: boolean,
     onChange?(event: any): void,
     name?: string,
-    id?: string,
     disabled?: boolean,
     title?: string
 }
 
 const Checkbox:React.SFC<CheckboxProps> = props => {
-    return <label>
-        <input type="checkbox" checked={props.checked} onChange={props.onChange} name={props.name} id={props.id} disabled={props.disabled} style={{marginRight: 3}} />
-        {props.label}
-    </label>;
+    return (
+    <UID>
+        {id => (
+            <div className="r-checkbox-new">
+                <input type="checkbox" name={props.name} checked={props.checked} onChange={props.onChange} id={id} disabled={props.disabled} />
+                <label htmlFor={id}>{props.label}</label>
+            </div>
+        )}
+    </UID>
+    );
 }
 
 Checkbox.defaultProps = {
