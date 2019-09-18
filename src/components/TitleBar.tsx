@@ -14,7 +14,9 @@ interface TitleBarProps {
     organizations?: Organization[],
     selectedOrganization?: Organization,
     onSelectOrganization? (organization:Organization): void,
-    supportNumber?: string
+    supportNumber?: string,
+    canEditSupportNumber?: boolean,
+    onEditSupportNumber? (): void
 }
 
 const TitleBar: React.SFC<TitleBarProps> = props => {
@@ -32,6 +34,11 @@ const TitleBar: React.SFC<TitleBarProps> = props => {
                         </div>
                         : null
                     }
+                    {props.canEditSupportNumber ? 
+                        <span className="fa-clickable" style={{display: 'inline', padding:'15px 15px 0px 0px'}} onClick={() => props.onEditSupportNumber()}>
+                            &nbsp;<i className="fa fa-pencil fa-lg"></i>
+                        </span>
+                    : null}
                     {props.organizations ?
                         <OrganizationSwitchMenu organizations={props.organizations} selectedOrganization={props.selectedOrganization} onSelectOrganization={props.onSelectOrganization}/>
                         : null
