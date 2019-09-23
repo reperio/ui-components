@@ -1,6 +1,6 @@
 {
   "name": "@reperio/ui-components",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Reperio UI Component Library",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
@@ -21,8 +21,10 @@
   "homepage": "https://github.com/reperio/ui-components#readme",
   "dependencies": {
     "@reperio/core-connector": "^3.5.0",
+    "@types/lodash": "^4.14.138",
     "classnames": "^2.2.6",
     "flexboxgrid": "^6.3.1",
+    "lodash": "^4.17.15",
     "moment": "^2.22.2",
     "react": "^16.4.2",
     "react-bootstrap": "^0.32.3",
