@@ -8,8 +8,6 @@ class Grid extends React.Component<GridProps, State> {
         super(props);
         this.state = {
             loading: false,
-            data: this.props.data,
-            pages: 0,
             pageSize: 1
         }
 
@@ -21,22 +19,16 @@ class Grid extends React.Component<GridProps, State> {
             loading: true
         });
 
-        const data = await this.props.onFetchData(state.page, state.pageSize, state.sorted, state.filtered);
+        await this.props.onFetchData(state.page, state.pageSize, state.sorted, state.filtered);
 
-        this.setState({
-            data,
-            pages: this.props.pages,
-            loading: false,
-            pageSize: state.pageSize
-        });
+        this.setState({loading: false});
     }
 
     render() {
-        const { data } = this.state;
         return <ReactTable
             className="r-grid -striped -highlight"
             columns={this.props.columns}
-            data={data}
+            data={this.props.data}
             defaultPageSize={this.props.defaultPageSize}
             minRows={this.state.pageSize}
             pageSizeOptions={this.props.pageSizeOptions}
@@ -44,7 +36,7 @@ class Grid extends React.Component<GridProps, State> {
             filterable={this.props.filterable}
             manual={this.props.manual}
             getTrProps={this.props.rowClick}
-            pages={this.state.pages}
+            pages={this.props.pages}
             onFetchData={this.bounced}
             loading={this.state.loading}
             />
@@ -53,12 +45,12 @@ class Grid extends React.Component<GridProps, State> {
 
 interface GridProps {
     columns: any[],
-    data?: any,
+    data: any,
     defaultPageSize?: number,
     defaultSorted?: any[],
     filterable?: boolean
     manual?: boolean
-    pages?: number,
+    pages: number,
     rowClick?: any,
     pageSizeOptions?: number[]
     onFetchData?(page: number, pageSize: number, sorted: any, filtered: any): Promise<State>;
@@ -66,8 +58,6 @@ interface GridProps {
 
 interface State {
     loading: boolean,
-    data: any,
-    pages: number,
     pageSize: number
 }
 
