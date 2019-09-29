@@ -38,7 +38,7 @@ class Grid extends React.Component<GridProps, State> {
             getTrProps={this.props.rowClick}
             pages={this.props.pages}
             onFetchData={this.bounced}
-            loading={this.state.loading}
+            loading={this.state.loading || this.props.loading}
             />
     }
 }
@@ -54,6 +54,7 @@ interface GridProps {
     rowClick?: any,
     pageSizeOptions?: number[]
     onFetchData?(page: number, pageSize: number, sorted: any, filtered: any): Promise<State>;
+    loading?: boolean;
 }
 
 interface State {
